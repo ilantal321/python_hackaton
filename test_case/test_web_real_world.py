@@ -18,7 +18,7 @@ class TestSignIn:
     def test_signup(self):
         login_fun = login_extisting_user()
         login_fun.signup(self.login)
-        time.sleep(5)
+        login_fun.signup(self.login)
         signup = CreateNewUser()
         signup.on_user_create(self.signup)
 
