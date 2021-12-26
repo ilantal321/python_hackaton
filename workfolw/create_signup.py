@@ -1,13 +1,12 @@
-import time
-
+from actions.UI_action import UI_action
+from allure_commons._allure import step
 
 class CreateNewUser:
+    @step('add new user to web site')
     def on_user_create(self, signup):
-        signup.first_name().send_keys("Dolev")
-        signup.last_name().send_keys("Hanan")
-        signup.user_name().send_keys("Ilan")
-        signup.password_user().send_keys("123456")
-        signup.confirm_password().send_keys("123456")
-        signup.btn_sign_up().click()
-
-
+        UI_action.send_keys_to_elem(signup.first_name(), "Dolev")
+        UI_action.send_keys_to_elem(signup.last_name(), "Hanan")
+        UI_action.send_keys_to_elem(signup.user_name(), "Ilan")
+        UI_action.send_keys_to_elem(signup.password_user(), "123456")
+        UI_action.send_keys_to_elem(signup.confirm_password(), "123456")
+        UI_action.click_on_elem(signup.btn_sign_up())
