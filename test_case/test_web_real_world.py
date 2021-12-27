@@ -35,13 +35,13 @@ class TestSignIn:
     @allure.title('Check balance to extisting user')
     @allure.description('this test Check balance to exsisting user task')
     @pytest.mark.order(2)
-    def test_02login(self,username,password,balance):
+    def test_02login(self):
         time.sleep(1)
         login_fun = login_extisting_user()
-        login_fun.signin(self.login, username, password)
+        login_fun.signin(self.login, 'Katharina_Bernier', 's3cret')
         time.sleep(5)
         login_fun.find_balance(self.side_bar)
-        assert self.side_bar.balance().text == balance
+        assert self.side_bar.balance().text == '$1,681.37'
 
 
     @allure.title('Check notification title')
