@@ -8,6 +8,7 @@ from page_object.real_world.page_side_bar import PageSideBar
 from page_object.real_world.page_signin import PageSignin
 from page_object.real_world.page_signup import PageSignup
 from utilities.listeners import EventListener
+import mysql.connector
 
 driver = None
 action = None
@@ -26,10 +27,17 @@ def init_web(request):
     request.cls.side_bar = side_bar
     signup = PageSignup(driver)
     request.cls.signup = signup
-    notifiaction=PageNotification(driver)
-    request.cls.notifiaction=notifiaction
+    notifiaction = PageNotification(driver)
+    request.cls.notifiaction = notifiaction
+
+    mydb = mysql.connector.connect(
+        host="remotemysql.com",
+        database='HgcKGz4q8T',
+        user="HgcKGz4q8T",
+        password="x0MLwiZ7im"
+    )
+    request.cls.mydb = mydb
+
     yield
+    mydb.close()
     driver.quit()
-
-
-

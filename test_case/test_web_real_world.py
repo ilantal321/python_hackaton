@@ -4,6 +4,7 @@ import pytest
 import smart_assertions
 from smart_assertions import soft_assert, verify_expectations
 
+from test_case import conftest
 from workfolw.create_signup import CreateNewUser
 from workfolw.login_existing_user import login_extisting_user
 from workfolw.work_flow_web import WFW_app
@@ -38,7 +39,7 @@ class TestSignIn:
     def test_02login(self):
         time.sleep(1)
         login_fun = login_extisting_user()
-        login_fun.signin(self.login, 'Katharina_Bernier', 's3cret')
+        login_fun.signin(self.login, self.mydb)
         time.sleep(5)
         login_fun.find_balance(self.side_bar)
         assert self.side_bar.balance().text == '$1,681.37'
