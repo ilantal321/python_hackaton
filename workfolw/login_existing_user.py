@@ -1,5 +1,7 @@
 from actions.UI_action import UI_action
 from allure_commons._allure import step
+import utilities
+from utilities.manage_pages import PageSignin
 
 
 class login_extisting_user:
@@ -8,6 +10,7 @@ class login_extisting_user:
         UI_action.send_keys_to_elem(login.username(), "Katharina_Bernier")
         UI_action.send_keys_to_elem(login.password(), "s3cret")
         UI_action.click_on_elem(login.btn_sign_in())
+
 
     @step('print balance')
     def find_balance(self, side_bar):
