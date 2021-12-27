@@ -43,3 +43,8 @@ def init_web(request):
     mydb.close()
     driver.quit()
     eyes.abort()
+
+@pytest.fixture(scope='class')
+def init_api(request):
+    url='http://localhost:3000'
+    request.cls.url = url

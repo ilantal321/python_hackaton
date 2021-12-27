@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <Environment>
         <Balance>$1,681.37</Balance>
-
+        <id>1</id>
+        <title>json-server</title>
+        <author>typicode</author>
     </Environment>
