@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
-
+from applitools.selenium import Eyes
 from page_object.page_notification import PageNotification
 from page_object.real_world.page_side_bar import PageSideBar
 from page_object.real_world.page_signin import PageSignin
@@ -12,12 +12,12 @@ import mysql.connector
 
 driver = None
 action = None
-
+eyes=Eyes()
 
 @pytest.fixture(scope='class')
 def init_web(request):
     driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver = EventFiringWebDriver(driver, EventListener())
+    EventFiringWebDriver(driver, EventListener())
     driver.maximize_window()
     driver.get("http://localhost:4000/")
     login = PageSignin(driver)
@@ -29,7 +29,8 @@ def init_web(request):
     request.cls.signup = signup
     notifiaction = PageNotification(driver)
     request.cls.notifiaction = notifiaction
-
+    eyes.api_key = 'CxOsxCzmfCLQj7Lj0zTmtss3agBhaZ7SROg102103rSkSow110'
+    request.cls.eyes=eyes
     mydb = mysql.connector.connect(
         host="remotemysql.com",
         database='HgcKGz4q8T',
@@ -41,3 +42,4 @@ def init_web(request):
     yield
     mydb.close()
     driver.quit()
+    eyes.abort()

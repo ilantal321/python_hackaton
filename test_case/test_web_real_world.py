@@ -63,4 +63,5 @@ class TestSignIn:
         wfa = WFW_app()
         wfa.logout(self.side_bar)
         time.sleep(1)
+        wfa.sign_eyes(self.driver,self.eyes)
         assert self.driver.current_url == 'http://localhost:4000/signin'
