@@ -6,9 +6,9 @@ import utilities
 class login_extisting_user:
 
     @step('login')
-    def signin(self, login):
-        UI_action.send_keys_to_elem(login.username(), "Katharina_Bernier")
-        UI_action.send_keys_to_elem(login.password(), "s3cret")
+    def signin(self, login,username,password):
+        UI_action.send_keys_to_elem(login.username(), username)
+        UI_action.send_keys_to_elem(login.password(), password)
         UI_action.click_on_elem(login.btn_sign_in())
 
 
