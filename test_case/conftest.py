@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
 
+from page_object.page_notification import PageNotification
 from page_object.real_world.page_side_bar import PageSideBar
 from page_object.real_world.page_signin import PageSignin
 from page_object.real_world.page_signup import PageSignup
@@ -25,7 +26,8 @@ def init_web(request):
     request.cls.side_bar = side_bar
     signup = PageSignup(driver)
     request.cls.signup = signup
-
+    notifiaction=PageNotification(driver)
+    request.cls.notifiaction=notifiaction
     yield
     driver.quit()
 
