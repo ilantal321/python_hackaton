@@ -3,7 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
 from applitools.selenium import Eyes
-from page_object.page_notification import PageNotification
+
+from page_object.financial_calculator.home_page import HomePage
+from page_object.financial_calculator.percentage_calc import PercentagePage
+from page_object.real_world.page_notification import PageNotification
 from page_object.real_world.page_side_bar import PageSideBar
 from page_object.real_world.page_signin import PageSignin
 from page_object.real_world.page_signup import PageSignup
@@ -48,3 +51,27 @@ def init_web(request):
 def init_api(request):
     url='http://localhost:3000'
     request.cls.url = url
+
+
+@pytest.fixture(scope='class')
+def init_mobile(request):
+    reportDirectory = 'reports'
+    reportFormat = 'xml'
+    dc = {}
+    testName = 'Untitled'
+    driver = None
+
+    dc['reportDirectory'] = reportDirectory
+    dc['reportFormat'] = reportFormat
+    dc['testName'] = testName
+    dc['udid'] = '32e0d8e5df3f7ece'
+    dc['appPackage'] = 'com.financial.calculator'
+    dc['appActivity'] = '.FinancialCalculators'
+    dc['platformName'] = 'android'
+    driver = webdriver.Remote('http://localhost:4729/wd/hub',dc)
+    home_page = HomePage(driver)
+    request.cls.home_page = home_page
+    pc = PercentagePage(driver)
+    request.cls.pc = pc
+    yield
+    driver.quit()
