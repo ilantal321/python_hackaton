@@ -1,10 +1,10 @@
 from actions.UI_action import UI_action
 from allure_commons._allure import step
 import utilities
-from utilities.manage_pages import PageSignin
 
 
 class login_extisting_user:
+
     @step('login')
     def signin(self, login):
         UI_action.send_keys_to_elem(login.username(), "Katharina_Bernier")
