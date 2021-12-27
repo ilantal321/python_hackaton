@@ -6,7 +6,7 @@ import utilities
 class login_extisting_user:
 
     @step('login')
-    def signin(self, login,mydb):
+    def signin(self, login, mydb):
         result = self.patch_user(mydb)
         UI_action.send_keys_to_elem(login.username(), result[0][0])
         UI_action.send_keys_to_elem(login.password(), result[0][1])

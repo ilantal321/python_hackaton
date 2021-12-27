@@ -34,7 +34,7 @@ class TestSignIn:
     def test_02login(self):
         time.sleep(1)
         login_fun = login_extisting_user()
-        login_fun.signin(self.login, 'Katharina_Bernier', 's3cret')
+        login_fun.signin(self.login, self.mydb)
         time.sleep(2)
         login_fun.find_balance(self.side_bar)
         assert self.side_bar.balance().text == utilities.commonOps.get_data("Balance")
