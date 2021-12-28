@@ -22,9 +22,9 @@ class login_extisting_user:
 
 
 
-    @step('print balance')
-    def find_balance(self, side_bar):
-        print(side_bar.balance().text)
+    # @step('print balance')
+    # def find_balance(self, side_bar):
+    #     print(side_bar.balance().text)
 
     @step('click new user')
     def signup(self, login):

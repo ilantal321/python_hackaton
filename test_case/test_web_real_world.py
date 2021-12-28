@@ -36,7 +36,6 @@ class TestSignIn:
         login_fun = login_extisting_user()
         login_fun.signin(self.login, self.mydb)
         time.sleep(2)
-        login_fun.find_balance(self.side_bar)
         assert self.side_bar.balance().text == utilities.commonOps.get_data("Balance")
 
     @allure.title('Check notification title')
