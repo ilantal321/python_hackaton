@@ -1,5 +1,3 @@
-# python_hackaton
-
 <h1 align="center">Hackthon in testing automation</h1>
 <h3>Project description</h3>
 <p>
