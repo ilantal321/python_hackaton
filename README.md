@@ -50,12 +50,16 @@ A final project in Pyhton for testing automation boot-camp. the program have a A
 
 - count categories on the side bar
 
+<h5>Jenkins</h5>
+
+![Home Page](https://github.com/ilantal321/tours-company/blob/main/ScreenShots/Home_Screen.PNG "Home Page")
+![Jenkins](https://github.com/ilantal321/videos/blob/main/WhatsApp%20Image%202021-12-28%20at%2017.37.07.jpeg "Jenkins")
 
 ## Authors
 **Ilan Tal**
 - [GitHub](https://github.com/ilantal321 )
 
-**Dolev sigron**
+**Dolev Sigron**
 - [GitHub](https://github.com/dolevda)
 
 **Hanan Dorfman**
