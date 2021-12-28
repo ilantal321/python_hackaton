@@ -9,4 +9,7 @@
         <input_amount>420</input_amount>
         <result>289.8</result>
         <calculatorResult>Display is 56</calculatorResult>
+        <electron_app>D:/apidemo/Electron API Demos-win32-ia32/Electron API Demos.exe</electron_app>
+        <electron_driver>D:/electron/electrondriver.exe</electron_driver>
+        <ElectronCategoryResult>6</ElectronCategoryResult>
     </Environment>

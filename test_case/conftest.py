@@ -4,6 +4,8 @@ from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriv
 from webdriver_manager.chrome import ChromeDriverManager
 from applitools.selenium import Eyes
 
+import utilities.commonOps
+from page_object.api_demo_electron.api_demo import APIDemoElectron
 from page_object.calculator.calculator_page import CalculatorPage
 from page_object.financial_calculator.home_page import HomePage
 from page_object.financial_calculator.percentage_calc import PercentagePage
@@ -92,3 +94,17 @@ def init_desktop(request):
     request.cls.cp = cp
     yield
     driver.quit()
+
+@pytest.fixture(scope='class')
+def init_electron(request):
+    electron_app = utilities.commonOps.get_data('electron_app')
+    edriver = utilities.commonOps.get_data('electron_driver')
+    options = webdriver.ChromeOptions()
+    options.binary_location = electron_app
+    driver = webdriver.Chrome(chrome_options=options, executable_path=edriver)
+    driver.implicitly_wait(5)
+    request.cls.driver=driver
+    epo=APIDemoElectron(driver)
+    request.cls.epo=epo
+    yield
+    driver.close()
