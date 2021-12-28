@@ -32,7 +32,6 @@ class TestSignIn:
     @allure.description('this test Check balance to exsisting user task')
     @pytest.mark.order(2)
     def test_02login(self):
-        assert False
         time.sleep(1)
         login_fun = login_extisting_user()
         login_fun.signin(self.login, self.mydb)
