@@ -1,3 +1,5 @@
+import allure
+
 from actions.UI_action import UI_action
 from allure_commons._allure import step
 import utilities
@@ -12,7 +14,7 @@ class login_extisting_user:
         UI_action.send_keys_to_elem(login.password(), result[0][1])
         UI_action.click_on_elem(login.btn_sign_in())
 
-    @step
+    @allure.step("sql query, gets the first user data from database")
     def patch_user(self, mydb):
         query = "SELECT username, password FROM Usernames limit 1"
         my_cursor = mydb.cursor()

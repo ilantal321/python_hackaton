@@ -1,7 +1,10 @@
+import allure
+
 from actions.UI_action import UI_action
 
 
 class CWF:
+    @allure.step("enters the calculation input")
     def test_combination(self,cp):
         UI_action.click_on_elem(cp.seven())
         UI_action.click_on_elem(cp.multiplyButton())
