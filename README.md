@@ -56,6 +56,10 @@ A final project in Pyhton for testing automation boot-camp. the program have a A
 
 ![Jenkins](https://github.com/ilantal321/videos/blob/main/WhatsApp%20Image%202021-12-28%20at%2017.46.54.jpeg "Allure")
 
+<h5>Applitools</h5>
+
+![Jenkins](https://github.com/ilantal321/videos/blob/main/WhatsApp%20Image%202021-12-28%20at%2017.55.49.jpeg "Applitools")
+
 ## Authors
 **Ilan Tal**
 - [GitHub](https://github.com/ilantal321 )
