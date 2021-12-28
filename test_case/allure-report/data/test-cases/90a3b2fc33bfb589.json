@@ -1,0 +1,260 @@
+{
+  "uid" : "90a3b2fc33bfb589",
+  "name" : "test01_combo",
+  "fullName" : "test_calculator.TestCalculator#test01_combo",
+  "historyId" : "9c948d6f5db5edbaef64d52f8bbc4041",
+  "time" : {
+    "start" : 1640693299949,
+    "stop" : 1640693307544,
+    "duration" : 7595
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "init_desktop",
+    "time" : {
+      "start" : 1640693298528,
+      "stop" : 1640693299947,
+      "duration" : 1419
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693300417,
+        "stop" : 1640693300748,
+        "duration" : 331
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.97\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693301192,
+        "stop" : 1640693301534,
+        "duration" : 342
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.80\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693301960,
+        "stop" : 1640693302289,
+        "duration" : 329
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.99\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693302724,
+        "stop" : 1640693303096,
+        "duration" : 372
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.82\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693303540,
+        "stop" : 1640693303886,
+        "duration" : 346
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.91\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693304328,
+        "stop" : 1640693304645,
+        "duration" : 317
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.83\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693305075,
+        "stop" : 1640693305430,
+        "duration" : 355
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.81\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693305896,
+        "stop" : 1640693306222,
+        "duration" : 326
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.98\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640693306696,
+        "stop" : 1640693307027,
+        "duration" : 331
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"E08D8E39-F14A-4FE3-8CAC-6C57ADB60111\", element=\"42.2623684.4.83\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 9
+  },
+  "afterStages" : [ {
+    "name" : "init_desktop::0",
+    "time" : {
+      "start" : 1640693307545,
+      "stop" : 1640693307647,
+      "duration" : 102
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_desktop')"
+  }, {
+    "name" : "suite",
+    "value" : "test_calculator"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalculator"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-2U5JCBG"
+  }, {
+    "name" : "thread",
+    "value" : "20948-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calculator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_desktop')" ]
+  },
+  "source" : "90a3b2fc33bfb589.json",
+  "parameterValues" : [ ]
+}
