@@ -1,10 +1,15 @@
+import os
 import time
 import allure
 import pytest
+from selenium.webdriver.support.wait import WebDriverWait
+
 import  utilities.commonOps
 from workfolw.create_signup import CreateNewUser
 from workfolw.login_existing_user import login_extisting_user
 from workfolw.work_flow_web import WFW_app
+
+from selenium.webdriver.support import expected_conditions as ec
 
 @pytest.mark.usefixtures("init_web")
 class TestSignIn:
@@ -22,7 +27,8 @@ class TestSignIn:
     def test_01signup(self, f_name, l_name, u_name, password, c_password):
         login_fun = login_extisting_user()
         login_fun.signup(self.login)
-        login_fun.signup(self.login)
+        if (self.browser_type.lower() == 'chrome' or self.browser_type.lower() == 'edge'):
+            login_fun.signup(self.login)
         signup = CreateNewUser()
         signup.on_user_create(self.signup, f_name, l_name, u_name, password, c_password)
         time.sleep(1)

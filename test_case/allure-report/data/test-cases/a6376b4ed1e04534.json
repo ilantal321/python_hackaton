@@ -1,0 +1,127 @@
+{
+  "uid" : "a6376b4ed1e04534",
+  "name" : "Check logout",
+  "fullName" : "test_web_real_world.TestSignIn#test_05logout",
+  "historyId" : "529dc0b6195cdff9551b45e6a6f61336",
+  "time" : {
+    "start" : 1640694580078,
+    "stop" : 1640694597410,
+    "duration" : 17332
+  },
+  "description" : "this test Check button logout",
+  "descriptionHtml" : "<p>this test Check button logout</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "init_web",
+    "time" : {
+      "start" : 1640694559814,
+      "stop" : 1640694567890,
+      "duration" : 8076
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "this test Check button logout",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "click element",
+      "time" : {
+        "start" : 1640694581105,
+        "stop" : 1640694581153,
+        "duration" : 48
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "elem",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e13c975733bd226a09a148301598829e\", element=\"a4a8eab8-9def-4034-83c2-6fc552558316\")>"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "init_web::0",
+    "time" : {
+      "start" : 1640694597411,
+      "stop" : 1640694599607,
+      "duration" : 2196
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "depends(on=['test_02login'])"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_web')"
+  }, {
+    "name" : "tag",
+    "value" : "order(5)"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_real_world"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSignIn"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-2U5JCBG"
+  }, {
+    "name" : "thread",
+    "value" : "26444-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_web_real_world"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "depends(on=['test_02login'])", "@pytest.mark.usefixtures('init_web')", "order(5)" ]
+  },
+  "source" : "a6376b4ed1e04534.json",
+  "parameterValues" : [ ]
+}

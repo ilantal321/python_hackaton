@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
 
 
