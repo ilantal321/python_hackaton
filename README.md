@@ -50,8 +50,11 @@ A final project in Pyhton for testing automation boot-camp. the program have a A
 
 <h5>Jenkins</h5>
 
-![Home Page](https://github.com/ilantal321/tours-company/blob/main/ScreenShots/Home_Screen.PNG "Home Page")
 ![Jenkins](https://github.com/ilantal321/videos/blob/main/WhatsApp%20Image%202021-12-28%20at%2017.37.07.jpeg "Jenkins")
+
+<h5>Allure</h5>
+
+![Jenkins](https://github.com/ilantal321/videos/blob/main/WhatsApp%20Image%202021-12-28%20at%2017.46.54.jpeg "Allure")
 
 ## Authors
 **Ilan Tal**
