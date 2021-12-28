@@ -4,6 +4,7 @@ from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriv
 from webdriver_manager.chrome import ChromeDriverManager
 from applitools.selenium import Eyes
 
+from page_object.calculator.calculator_page import CalculatorPage
 from page_object.financial_calculator.home_page import HomePage
 from page_object.financial_calculator.percentage_calc import PercentagePage
 from page_object.real_world.page_notification import PageNotification
@@ -15,7 +16,8 @@ import mysql.connector
 
 driver = None
 action = None
-eyes=Eyes()
+eyes = Eyes()
+
 
 @pytest.fixture(scope='class')
 def init_web(request):
@@ -33,7 +35,7 @@ def init_web(request):
     notifiaction = PageNotification(driver)
     request.cls.notifiaction = notifiaction
     eyes.api_key = 'CxOsxCzmfCLQj7Lj0zTmtss3agBhaZ7SROg102103rSkSow110'
-    request.cls.eyes=eyes
+    request.cls.eyes = eyes
     mydb = mysql.connector.connect(
         host="remotemysql.com",
         database='HgcKGz4q8T',
@@ -47,9 +49,10 @@ def init_web(request):
     driver.quit()
     eyes.abort()
 
+
 @pytest.fixture(scope='class')
 def init_api(request):
-    url='http://localhost:3000'
+    url = 'http://localhost:3000'
     request.cls.url = url
 
 
@@ -68,10 +71,24 @@ def init_mobile(request):
     dc['appPackage'] = 'com.financial.calculator'
     dc['appActivity'] = '.FinancialCalculators'
     dc['platformName'] = 'android'
-    driver = webdriver.Remote('http://localhost:4729/wd/hub',dc)
+    driver = webdriver.Remote('http://localhost:4729/wd/hub', dc)
     home_page = HomePage(driver)
     request.cls.home_page = home_page
     pc = PercentagePage(driver)
     request.cls.pc = pc
+    yield
+    driver.quit()
+
+
+@pytest.fixture(scope='class')
+def init_desktop(request):
+    desired_caps = {}
+    desired_caps["app"] = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
+    desired_caps["platformName"] = "Windows"
+    desired_caps["deviceName"] = "WindowsPC"
+    driver = webdriver.Remote("http://127.0.0.1:4723", desired_caps)
+    driver.implicitly_wait(5)
+    cp = CalculatorPage(driver)
+    request.cls.cp = cp
     yield
     driver.quit()

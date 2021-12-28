@@ -32,6 +32,7 @@ class TestSignIn:
     @allure.description('this test Check balance to exsisting user task')
     @pytest.mark.order(2)
     def test_02login(self):
+        assert False
         time.sleep(1)
         login_fun = login_extisting_user()
         login_fun.signin(self.login, self.mydb)
@@ -41,6 +42,7 @@ class TestSignIn:
 
     @allure.title('Check notification title')
     @allure.description('this test Check notification title')
+    @pytest.mark.depends(on=['test_02login'])
     @pytest.mark.order(3)
     def test_03notification_title(self):
         time.sleep(1)
@@ -51,12 +53,14 @@ class TestSignIn:
 
     @allure.title('Check notification list size')
     @allure.description('this test Check notification list size')
+    @pytest.mark.depends(on=['test_03notification_title'])
     @pytest.mark.order(4)
     def test_04notification_size(self):
         assert len(self.notifiaction.notification_list()) == 8
 
     @allure.title('Check logout')
     @allure.description('this test Check button logout')
+    @pytest.mark.depends(on=['test_02login'])
     @pytest.mark.order(5)
     def test_05logout(self):
         time.sleep(1)
