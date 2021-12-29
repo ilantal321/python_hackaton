@@ -18,7 +18,7 @@ A final project in Pyhton for testing automation boot-camp. the program have a A
 - login (with data-base connection) and cheack user balance
 - check notification text
 - cheack notification list size
-- logout with (applitools)
+- logout (with applitools)
 
 ![caption](https://github.com/ilantal321/videos/blob/main/Cypress%20Real%20World%20App%20-%20Google%20Chrome%202021-12-28%2016-48-32.gif)
 
